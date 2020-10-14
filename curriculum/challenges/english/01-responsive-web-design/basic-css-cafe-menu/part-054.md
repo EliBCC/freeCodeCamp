@@ -1,13 +1,15 @@
 ---
-id: 5f4701b942c824109626c3d8
-title: Part 78
+id: 5f3ef6e0086dc80481f8cb03
+title: Part 54
 challengeType: 0
 ---
 
 ## Description
 <section id='description'>
 
-Now add the `bottom-line` class to the second `hr` element so the styling is applied.
+Something does not look right. You added the correct `class` attribute to the `p` elements with dessert names, but you have not defined a selector for it.
+
+Since the `flavor` class selector already has the properties you want, just add the `dessert` class to it.
 
 </section>
 
@@ -41,9 +43,8 @@ tests:
     <div class="menu">
       <header>
         <h1>CAMPER CAFE</h1>
-        <p class="established">Est. 2020</p>
+        <p>Est. 2020</p>
       </header>
-      <hr>
       <main>
         <section>
           <h2>Coffees</h2>
@@ -79,15 +80,6 @@ tests:
           </article>
         </section>
       </main>
-      --fcc-editable-region--
-      <hr>
-      --fcc-editable-region--
-      <footer>
-        <p>
-          <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
-        </p>
-        <p>123 Free Code Camp Drive</p>
-      </footer>
     </div>
   </body>
 <html>
@@ -100,20 +92,6 @@ tests:
 ```css
 body {
   background-image: url(https://tinyurl.com/coffee-beans-fcc);
-  font-family: sans-serif;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-.established {
-  font-style: italic;
 }
 
 h1, h2, p {
@@ -125,35 +103,18 @@ h1, h2, p {
   background-color: burlywood;
   margin-left: auto;
   margin-right: auto;
-  padding: 20px;
-  max-width: 500px;
-}
-
-hr {
-  height: 2px;
-  background-color: brown;
-  border-color: brown;
-}
-
-.bottom-line {
-  margin-top: 25px;
-}
-
-h1, h2 {
-  font-family: Impact, serif;
 }
 
 .item p {
   display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  font-size: 18px;
 }
 
-.flavor, .dessert {
+--fcc-editable-region--
+.flavor {
   text-align: left;
   width: 75%;
 }
+--fcc-editable-region--
 
 .price {
   text-align: right;
