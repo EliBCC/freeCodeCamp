@@ -46,6 +46,16 @@ padding in night mode */
   margin: 0;
 }
 
+/* Code block strings have low contrast in night mode. This attempts to increase contrast above 4.5:1 */
+.night .language-css .token.string,
+.night .style .token.string,
+.night .token.entity,
+.night .token.operator,
+.night .token.url {
+  color: #ec9126;
+  background: hsl(0 0% 100% / 0.12);
+}
+
 .night :not(pre) > code[class*='language-'],
 .night pre[class*='language-'] {
   background: var(--primary-background);
